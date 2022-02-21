@@ -15,7 +15,7 @@
     
     <title>Car prediction</title>
   </head>
-  <body style="background-image: url(background.jpg);">
+  <body style="background-image: url(./background.jpg);">
     <nav class="navbar navbar-light bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
@@ -25,8 +25,9 @@
         </div>
     </nav>
 
-    <div style="width: 700px; margin-left: 400px; margin-top: 50px; padding: 10px;" class="border border-primary rounded">
-        <form action="{{ url_for('predict')}}" method="post">
+    <div style="margin-top: 50px; flex-basis: 450px;" class="d-flex justify-content-center">
+       <div style="padding: 10px;" class="border border-primary rounded">
+        <form action="{{ url_for('predict')}}" method="post" class="">
         <div>
             <h2 class="text-center" style="padding: 20px;">Car Details</h2>
         </div>
@@ -75,10 +76,13 @@
             <button type="submit" class="btn btn-primary" style="width: 100px;">Submit</button>
         </div>
         </form>
+       </div> 
     </div>
-    <div class="border border-primary rounded d-flex" style="width: 700px; margin-left: 400px; margin-top: 50px; margin-bottom: 50px; padding: 10px;">
+    <div class="d-flex justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
+       <div class="border border-primary rounded d-flex" style="flex-basis: 650px; padding: 10px;"> 
         <h3>Result :&nbsp;</h3>
         <h3>{{ prediction_text }}</h3>
+       </div> 
     </div>
   </body>
 </html>
