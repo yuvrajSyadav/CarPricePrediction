@@ -18,68 +18,71 @@
   <body style="background-image: url(./background.jpg);">
     <nav class="navbar navbar-light bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="#" style="color:white;">
             <img src= "https://img.icons8.com/color/50/000000/car-badge.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
             Car Selling Price Prediction
           </a>
         </div>
     </nav>
 
-    <div style="margin-top: 50px; flex-basis: 450px;" class="d-flex justify-content-center">
-       <div style="padding: 10px;" class="border border-primary rounded">
-        <form action="{{ url_for('predict')}}" method="post" class="">
-        <div>
-            <h2 class="text-center" style="padding: 20px;">Car Details</h2>
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Year</h4>
-            <input class="form-control" type="text" name="Year" required="required" placeholder="Eg. 2013 , 2018" aria-label="default input example">
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Present Price</h4>
-            <input class="form-control" type="text" name="Present_Price" required="required" placeholder="Eg. 7 , 7.67 , 6.50 (in Lakhs)" aria-label="default input example">
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Kilometers Driven</h4>
-            <input class="form-control" type="text" name="Kms_Driven" required="required" placeholder="Eg. 13000 , 50000" aria-label="default input example">
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Owner</h4>
-            <input class="form-control" type="text" name="Owner" required="required" placeholder="Eg. 0 , 1, 3" aria-label="default input example">
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Fuel Type</h4>
-            <select name="Fuel_Type_Petrol" required="required" class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">Petrol</option>
-                <option value="2">Diesel</option>
-                <option value="3">CNG</option>
-            </select>
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Seller Type</h4>
-            <select name="Seller_Type_Individual" required="required" class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">Dealer</option>
-                <option value="2">Individual</option>
-            </select>
-        </div>
-        <div style="padding: 10px;" class="d-flex">
-            <h4 class="pe-3" style="width: 400px;">Transmission Type</h4>
-            <select name="Transmission_Mannual" required="required" class="form-select" aria-label="Default select example">
-                <option selected>Open this select menu</option>
-                <option value="1">Mannual</option>
-                <option value="2">Automatic</option>
-            </select>
-        </div>
-        <div style="padding: 10px; margin-left: 250px;" >
-            <button type="submit" class="btn btn-primary" style="width: 100px;">Submit</button>
-        </div>
-        </form>
-       </div> 
-    </div>
-    <div class="d-flex justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
-       <div class="border border-primary rounded d-flex" style="flex-basis: 650px; padding: 10px;"> 
+    
+    <div style="flex-basis: 800px; margin-top: 50px; margin-bottom: 50px; margin-left: 20px; margin-right: 20px;" class="d-flex justify-content-center" >
+        <div style="padding: 10px; flex-basis: 600px;" class="border border-primary rounded">
+         <form action="{{ url_for('predict')}}" method="post" class="" style="flex-basis: 800px;">
+         <div>
+             <h2 class="text-center" style="padding: 20px;">Car Details</h2>
+         </div>
+         <div style="padding: 10px;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Year</h4>
+             <input class="form-control" type="text" style="flex-basis: 400px" name="Year" required="required" placeholder="Eg. 2013 , 2018" aria-label="default input example">
+         </div>
+         <div style="padding: 10px;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Present Price</h4>
+             <input class="form-control" type="text" style="flex-basis: 400px" name="Present_Price" required="required" placeholder="Eg. 7 , 7.67 , 6.50 (in Lakhs)" aria-label="default input example">
+         </div>
+         <div style="padding: 10px;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Kilometers Driven</h4>
+             <input class="form-control" type="text" style="flex-basis: 400px" name="Kms_Driven" required="required" placeholder="Eg. 13000 , 50000" aria-label="default input example">
+         </div>
+         <div style="padding: 10px;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Owner</h4>
+             <input class="form-control" type="text" style="flex-basis: 400px" name="Owner" required="required" placeholder="Eg. 0 , 1, 3" aria-label="default input example">
+         </div>
+         <div style="padding: 10px;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Fuel Type</h4>
+             <select name="Fuel_Type_Petrol" required="required" style="flex-basis: 400px" class="form-select" aria-label="Default select example">
+                 <option selected>Open this select menu</option>
+                 <option value="1">Petrol</option>
+                 <option value="2">Diesel</option>
+                 <option value="3">CNG</option>
+             </select>
+         </div>
+         <div style="padding: 10px;;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Seller Type</h4>
+             <select name="Seller_Type_Individual" required="required" style="flex-basis: 400px" class="form-select" aria-label="Default select example">
+                 <option selected>Open this select menu</option>
+                 <option value="1">Dealer</option>
+                 <option value="2">Individual</option>
+             </select>
+         </div>
+         <div style="padding: 10px;" class="d-flex">
+             <h4 class="pe-3" style="flex-basis: 600px;">Transmission Type</h4>
+             <select name="Transmission_Mannual" required="required" style="flex-basis: 400px" class="form-select" aria-label="Default select example">
+                 <option selected>Open this select menu</option>
+                 <option value="1">Mannual</option>
+                 <option value="2">Automatic</option>
+             </select>
+         </div>
+         <div style="padding-top: 15px; margin-bottom: 15px; display: flex; justify-content: center;">
+             <button type="submit" class="btn btn-primary" style="width: 100px; height: 50px;">Submit</button>
+         </div>
+         </form>
+        </div> 
+     </div>    
+
+    
+    <div class="d-flex justify-content-center" style="margin-top: 50px; margin-bottom: 50px; margin-left: 20px; margin-right: 20px;">
+       <div class="border border-primary rounded d-flex" style="flex-basis: 600px; padding: 10px;"> 
         <h3>Result :&nbsp;</h3>
         <h3>{{ prediction_text }}</h3>
        </div> 
